@@ -3,21 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Wallet Connect</title>
+    <title>Crypto Coinflip Game</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <h1>Connect Your Wallet</h1>
-     <br>
-    <select id="networkSelect">
-        <option value="ethereum">Ethereum</option>
-        <option value="solana">Solana</option>
-    </select>
-    <br><br>
-    <button id="connectWallet">Connect Wallet</button>
-    <br>
-    <div id="balance"></div>
+    <div class="container">
+        <!-- Wallet Section -->
+        <div class="wallet-section">
+            <h1>Connect Your Wallet</h1>
+            <select id="networkSelect">
+                <option value="ethereum">Ethereum</option>
+                <option value="solana">Solana</option>
+            </select>
+            <br><br>
+            <button id="connectWallet">Connect Wallet</button>
+            <div id="balance"></div>
+        </div>
+
+        <!-- Coin Flip Section -->
+        <div class="coin-section">
+            <h1>Play Coinflip Game</h1>
+            <div>
+                <label for="amount">Amount to Risk:</label>
+                <input type="number" id="amount" min="0" step="any">
+            </div>
+            <br>
+            <div>
+                <label for="side">Choose Side:</label>
+                <select id="side">
+                    <option value="heads">Heads</option>
+                    <option value="tails">Tails</option>
+                </select>
+            </div>
+            <br>
+            <button id="flipCoin">Flip Coin</button>
+            <div id="result"></div>
+            <div id="resultDisplay"></div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.32.0/lib/index.iife.min.js"></script>

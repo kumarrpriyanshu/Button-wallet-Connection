@@ -1,69 +1,107 @@
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+/* Reset some default browser styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #141414;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
+/* Container for the entire game */
 .container {
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
     max-width: 400px;
     width: 100%;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+/* Wallet section */
+.wallet-section {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-select {
-    padding: 10px;
-    margin-left: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-bottom: 10px;
+/* Coin flip section */
+.coin-section {
+    text-align: center;
+}
+
+/* Styling for the h1 title */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00D1FF;
+}
+
+/* Select box, input, and button styling */
+select, input[type="number"], button {
     width: 100%;
-    max-width: 300px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #333;
+    color: #00D1FF;
+    border: 2px solid #00D1FF;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+select:focus, input:focus {
+    border-color: #00FFD1;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    margin-left: 10px;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
+    background-color: #00D1FF;
+    color: #141414;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00FFD1;
 }
 
-.balance {
-    font-size: 20px;
-    color:plum;
-    margin-left: 10px;
+/* Styling for the balance and result display */
+#balance, #result, #resultDisplay {
+    margin-top: 20px;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
 }
 
-.balance a {
-    color: #007bff;
-    text-decoration: none;
+/* Add some spacing to form elements */
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.balance a:hover {
-    text-decoration: underline;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    select, input[type="number"], button {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
